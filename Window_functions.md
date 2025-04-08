@@ -6,27 +6,41 @@ As **Window Functions** no PostgreSQL são ferramentas poderosas que permitem re
 
 **Independência das Linhas**: As Window Functions mantêm a identidade das linhas originais, permitindo cálculos sem alterar a estrutura dos dados. 
 **ROW_NUMBER()**: Retorna o número sequencial de cada linha dentro de sua janela. 
-|SELECT nome, salario, ROW_NUMBER() OVER (ORDER BY salario DESC) AS posicao| 
-|----------|
-|FROM funcionarios;| 
+<pre style="background-color: black; color: white; padding: 10px; font-family: monospace;">
+  <span style="color: cyan;">SELECT</span> nome, salario, <span style="color: cyan;">ROW_NUMBER()</span> 
+  <span style="color: cyan;">OVER (ORDER BY</span> salario DESC) AS posicao<br>
+  <span style="color: cyan;">FROM</span> <span style="color: white;">funcionarios</span>;
+</pre>
+
 **Resultado**: Lista os funcionários ordenados pelo salário, com uma posição numérica. 
 
 **RANK()**: Retorna a classificação de cada linha dentro de sua janela, com empates recebendo o mesmo valor. 
-|SELECT nome, salario, RANK() OVER (ORDER BY salario DESC) AS rank| 
-|-----------------|
-|FROM funcionarios;| 
+<pre style="background-color: black; color: white; padding: 10px; font-family: monospace;">
+  <span style="color: cyan;">SELECT</span> nome, salario, <span style="color: cyan;">RANK()</span> 
+  <span style="color: cyan;">OVER (ORDER BY</span> salario DESC) AS rank<br>
+  <span style="color: cyan;">FROM</span> <span style="color: white;">funcionarios</span>;
+</pre>
+
 **Resultado**: Classifica os funcionários pelo salário, considerando empates. 
 
 **AVG()**: Calcula a média de valores dentro de uma janela. 
-|SELECT departamento, salario, AVG(salario) OVER (PARTITION BY departamento) AS media_departamento| 
-|----------------|
-|FROM funcionarios;| 
+<pre style="background-color: black; color: white; padding: 10px; font-family: monospace;">
+  <span style="color: cyan;">SELECT</span> departamento, salario, 
+  <span style="color: cyan;">AVG(salario)</span> 
+  <span style="color: cyan;">OVER (PARTITION BY</span> departamento) AS media_departamento<br>
+  <span style="color: cyan;">FROM</span> <span style="color: white;">funcionarios</span>;
+</pre>
+
 **Resultado**: Mostra o salário de cada funcionário e a média salarial do departamento. 
 
 **LAG() e LEAD()**: Permitem acessar valores de linhas anteriores ou posteriores. 
-|SELECT nome, salario, LAG(salario) OVER (ORDER BY salario) AS salario_anterior| 
-|----------------|
-|FROM funcionarios;| 
+<pre style="background-color: black; color: white; padding: 10px; font-family: monospace;">
+  <span style="color: cyan;">SELECT</span> nome, salario, 
+  <span style="color: cyan;">LAG(salario)</span> 
+  <span style="color: cyan;">OVER (ORDER BY</span> salario) AS salario_anterior<br>
+  <span style="color: cyan;">FROM</span> <span style="color: white;">funcionarios</span>;
+</pre>
+
 **Resultado**: Exibe o salário atual e o salário da linha anterior. 
 
 # Benefícios
