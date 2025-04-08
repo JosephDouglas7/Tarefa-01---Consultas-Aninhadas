@@ -34,7 +34,8 @@ As **Window Functions** no PostgreSQL são ferramentas poderosas que permitem re
 
 **Performance**: Otimiza cálculos em grandes conjuntos de dados.
 
-# Referências 
+# Referências: 
+
 [Copilot](https://copilot.microsoft.com/) 
 
 
