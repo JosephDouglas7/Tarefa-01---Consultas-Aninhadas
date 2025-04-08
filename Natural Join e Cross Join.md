@@ -60,5 +60,9 @@
 |Tipo de Join| Combina com base em...?| Número de linhas resultantes|
 |------------| ------------|--------------------|
 |Natural Join| Colunas compartilhadas| Apenas combinações onde as colunas comuns são iguais|  
-|Cross Join| Produto cartesiano(todas as linhas)|Multiplicação do número de linhas das tabelas envolvidas|
+|Cross Join| Produto cartesiano(todas as linhas)|Multiplicação do número de linhas das tabelas envolvidas| 
+
+# Referências 
+[Copilot](https://copilot.microsoft.com/) 
+
 
