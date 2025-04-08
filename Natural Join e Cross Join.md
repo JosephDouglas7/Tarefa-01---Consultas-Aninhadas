@@ -21,10 +21,12 @@
 |20| Vendas| 
 
 # Consulta com NATURAL JOIN: 
-|SELECT *| 
-|--------|
-|FROM Funcionarios|  
-|NATURAL JOIN Departamentos;|  
+<pre style="background-color: black; color: white; padding: 10px; font-family: monospace;">
+  <span style="color: cyan;">SELECT</span> *            <!-- branco -->
+  <span style="color: cyan;">FROM</span> <span style="color: white;">Funcionarios</span>    <!-- azul + branco -->
+  <span style="color: cyan;">NATURAL JOIN</span> <span style="color: white;">Departamentos</span>; <!-- verde + branco -->
+</pre>
+
 
 **Resultado**: 
 |ID| Nome| DepartamentoID| NomeDepartamento| 
@@ -42,10 +44,11 @@
 
 **Exemplo**: Mesmas tabelas Funcionarios e Departamentos. 
 # Consulta com CROSS JOIN: 
-|SELECT *| 
-|--------|
-|FROM Funcionarios| 
-|CROSS JOIN Departamentos;| 
+<pre style="background-color: black; color: white; padding: 10px; font-family: monospace;">
+  <span style="color: cyan;">SELECT</span> * <br>
+  <span style="color: cyan;">FROM</span> <span style="color: white;">Funcionarios</span> <br>
+  <span style="color: cyan;">CROSS JOIN</span> <span style="color: white;">Departamentos</span>;
+</pre>
 
 |ID| Nome| DepartamentoID(Funcionarios)| DepartamentoID(Departamentos)| NomeDepartamento|
 |--|-----| --------------|-------------|-----------------|
