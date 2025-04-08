@@ -62,7 +62,8 @@
 |Natural Join| Colunas compartilhadas| Apenas combinações onde as colunas comuns são iguais|  
 |Cross Join| Produto cartesiano(todas as linhas)|Multiplicação do número de linhas das tabelas envolvidas| 
 
-# Referências 
+# Referências: 
+
 [Copilot](https://copilot.microsoft.com/) 
 
 
